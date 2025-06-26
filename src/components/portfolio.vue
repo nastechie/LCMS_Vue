@@ -38,9 +38,10 @@
               <button class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors">
                 View Work
               </button>
-              <button class="px-8 py-3 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors">
+              <!-- <button class="px-8 py-3 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors">
                 Download CV
-              </button>
+              </button> -->
+              <a href="https://nas-portfolio-lac.vercel.app/" class="px-8 py-3 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors">Download CV</a>
             </div>
           </div>
         </div>
