@@ -1,11 +1,11 @@
 
 <template>
   <!-- <HelloWorld /> -->
-  <portfolio/>
+  <GetWellSoon/>
 </template>
 
 <script setup lang="ts">
-  import portfolio from './components/portfolio.vue'
+  import GetWellSoon from './components/GetWellSoon.vue'
 </script>
 
 <style scoped>
