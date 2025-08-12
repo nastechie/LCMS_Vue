@@ -192,7 +192,8 @@
 
 <script setup lang="ts">
 import { ref, computed, reactive } from 'vue'
-import { Course, mockCourses } from '../lib/mock-data'
+import type { Course } from '../lib/mock-data'
+import { mockCourses } from '../lib/mock-data'
 import { Search, Plus, MoreVertical, BookOpen, Clock, DollarSign, Edit, Trash } from 'lucide-vue-next'
 
 const courses = ref<Course[]>([...mockCourses])
@@ -245,9 +246,10 @@ const handleSubmit = () => {
       courses.value[index] = { ...editingCourse.value, ...formData }
     }
   } else {
+    const { id, ...rest } = formData as Course
     const newCourse: Course = {
       id: Date.now().toString(),
-      ...formData as Course,
+      ...rest,
     }
     courses.value.push(newCourse)
   }
