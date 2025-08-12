@@ -120,7 +120,8 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { Class, mockClasses } from '../lib/mock-data'
+import type { Class } from '../lib/mock-data'
+import { mockClasses } from '../lib/mock-data'
 import { Search, Plus, MoreVertical, GraduationCap, Users, Calendar, Edit, Trash } from 'lucide-vue-next'
 
 const classes = ref<Class[]>([...mockClasses])

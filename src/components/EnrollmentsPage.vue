@@ -142,7 +142,8 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { Enrollment, mockEnrollments } from '../lib/mock-data'
+import type { Enrollment } from '../lib/mock-data'
+import { mockEnrollments } from '../lib/mock-data'
 import { Search, Plus, MoreVertical, ClipboardList, GraduationCap, Calendar, Edit, Trash } from 'lucide-vue-next'
 
 const enrollments = ref<Enrollment[]>([...mockEnrollments])

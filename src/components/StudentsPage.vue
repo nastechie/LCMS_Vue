@@ -234,7 +234,8 @@
 
 <script setup lang="ts">
 import { ref, computed, reactive } from 'vue'
-import { Student, mockStudents } from '../lib/mock-data'
+import type { Student } from '../lib/mock-data'
+import { mockStudents } from '../lib/mock-data'
 import { Search, Plus, MoreVertical, Phone, Mail, MapPin, Edit, Trash } from 'lucide-vue-next'
 
 const students = ref<Student[]>([...mockStudents])
@@ -294,9 +295,11 @@ const handleSubmit = () => {
       students.value[index] = { ...editingStudent.value, ...formData }
     }
   } else {
+    // Omit 'id' from formData to avoid overwriting the generated id
+    const { id, ...formDataWithoutId } = formData as Student
     const newStudent: Student = {
       id: Date.now().toString(),
-      ...formData as Student,
+      ...formDataWithoutId,
       enrolledClasses: 0
     }
     students.value.push(newStudent)

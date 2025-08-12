@@ -116,7 +116,8 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { User, mockUsers } from '../lib/mock-data'
+import type { User } from '../lib/mock-data'
+import { mockUsers } from '../lib/mock-data'
 import { Search, Plus, MoreVertical, Shield, User as UserIcon, Edit, Trash } from 'lucide-vue-next'
 
 const users = ref<User[]>([...mockUsers])
